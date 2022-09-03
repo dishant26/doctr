@@ -274,7 +274,7 @@ def main(args):
         train_set,
         batch_size=args.batch_size,
         drop_last=True,
-        num_workers=args.workers,
+        num_workers=0,
         sampler=RandomSampler(train_set),
         pin_memory=torch.cuda.is_available(),
         collate_fn=train_set.collate_fn,
